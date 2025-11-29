@@ -1,0 +1,11 @@
+export const CONTRACT_ADDRESSES = {
+    TICKET_NFT: process.env.NEXT_PUBLIC_TICKET_NFT_ADDRESS || '',
+    EVENT_FACTORY: process.env.NEXT_PUBLIC_EVENT_FACTORY_ADDRESS || '',
+    MARKETPLACE: process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS || ''
+}
+
+export const ABI = {
+    TICKET_NFT: [],
+    EVENT_FACTORY: [],
+    MARKETPLACE: []
+}
