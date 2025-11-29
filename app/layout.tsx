@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { cookies } from "next/headers";
 import Web3ModalProvider from "@/context/Web3Modal";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default async function RootLayout({
       >
         <Web3ModalProvider cookies={cookieString}>
           {children}
+          <Toaster position="top-right" richColors />
         </Web3ModalProvider>
       </body>
     </html>
