@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
+import { cookies } from "next/headers";
+import Web3ModalProvider from "@/context/Web3Modal";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,17 +19,22 @@ export const metadata: Metadata = {
   description: "Decentralized event ticketing platform powered by Reown",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const cookieString = cookieStore.toString();
+
   return (
     <html lang="en">
       <body
         className={`${inter.variable} ${outfit.variable} antialiased`}
       >
-        {children}
+        <Web3ModalProvider cookies={cookieString}>
+          {children}
+        </Web3ModalProvider>
       </body>
     </html>
   );
