@@ -28,7 +28,8 @@ type CreateEventInput = z.infer<typeof createEventSchema>
 
 export default function CreateEventPage() {
     const router = useRouter()
-    const [image, setImage] = useState<File | null>(null)
+    const [image, setImage] = useState<File | undefined>(undefined)
+    const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined)
     const [isLoading, setIsLoading] = useState(false)
 
     const { register, handleSubmit, setValue, formState: { errors } } = useForm<CreateEventInput>({
@@ -38,7 +39,6 @@ export default function CreateEventPage() {
     const onSubmit = async (data: CreateEventInput) => {
         try {
             setIsLoading(true)
-            // Simulate API call/Contract interaction
             await new Promise(resolve => setTimeout(resolve, 2000))
             console.log('Event Data:', { ...data, image })
             toast.success('Event created successfully!')
@@ -87,7 +87,11 @@ export default function CreateEventPage() {
                                 <div className="space-y-2">
                                     <Label>Date & Time</Label>
                                     <DatePicker
-                                        onSelect={(date) => setValue('date', date as Date)}
+                                        date={selectedDate}
+                                        setDate={(date) => {
+                                            setSelectedDate(date)
+                                            if (date) setValue('date', date)
+                                        }}
                                     />
                                     {errors.date && (
                                         <p className="text-sm text-red-500">{errors.date.message}</p>
@@ -120,7 +124,8 @@ export default function CreateEventPage() {
                             <div className="space-y-2">
                                 <Label>Event Image</Label>
                                 <ImageUpload
-                                    onUpload={(file) => setImage(file)}
+                                    value={image}
+                                    onChange={(file) => setImage(file)}
                                 />
                             </div>
 
