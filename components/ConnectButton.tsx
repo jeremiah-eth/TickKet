@@ -3,7 +3,7 @@
 import { useAppKit } from '@reown/appkit/react'
 import { useAccount } from 'wagmi'
 
-export default function ConnectButton() {
+export function ConnectButton() {
     const { open } = useAppKit()
     const { address, isConnected } = useAccount()
 

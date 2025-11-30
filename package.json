@@ -10,11 +10,16 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@coinbase/wallet-sdk": "^4.3.7",
+    "@gemini-wallet/core": "^0.3.2",
+    "@metamask/sdk": "^0.34.0",
     "@reown/appkit": "^1.8.14",
     "@reown/appkit-adapter-wagmi": "^1.8.14",
     "@tanstack/react-query": "^5.90.11",
     "@types/canvas-confetti": "^1.9.0",
+    "@walletconnect/ethereum-provider": "^2.23.0",
     "canvas-confetti": "^1.9.4",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.555.0",
     "next": "16.0.5",

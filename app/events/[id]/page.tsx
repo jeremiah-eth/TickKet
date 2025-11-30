@@ -11,7 +11,8 @@ import { toast } from 'sonner'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export default function EventDetailPage({ params }: { params: { id: string } }) {
+export default async function EventDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params
     const [quantity, setQuantity] = useState(1)
 
     const handlePurchase = () => {
@@ -35,7 +36,7 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                                     <Badge>Music</Badge>
                                 </div>
                                 <h1 className="text-4xl font-bold text-white mb-4 font-heading">
-                                    Sample Event #{params.id}
+                                    Sample Event #{id}
                                 </h1>
                                 <p className="text-gray-400">
                                     This is a sample event description. In a real application, this would be fetched from the blockchain or a database.

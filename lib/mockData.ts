@@ -40,3 +40,39 @@ export const mockEvents = [
         isActive: true
     }
 ]
+
+export const mockTickets = [
+    {
+        id: '101',
+        eventId: '1',
+        eventName: 'Web3 Music Festival',
+        date: '2026-03-15T20:00:00',
+        location: 'Virtual Metaverse',
+        price: '0.15',
+        tokenId: '1',
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+        owner: '0x1234...5678'
+    },
+    {
+        id: '102',
+        eventId: '2',
+        eventName: 'Blockchain Developer Conference',
+        date: '2026-04-20T09:00:00',
+        location: 'San Francisco, CA',
+        price: '0.25',
+        tokenId: '42',
+        image: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=800&q=80',
+        owner: '0xabcd...efgh'
+    },
+    {
+        id: '103',
+        eventId: '1',
+        eventName: 'Web3 Music Festival',
+        date: '2026-03-15T20:00:00',
+        location: 'Virtual Metaverse',
+        price: '0.15',
+        tokenId: '2',
+        image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+        owner: '0x9876...5432'
+    }
+]
