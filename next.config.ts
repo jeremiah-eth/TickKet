@@ -23,25 +23,7 @@ const nextConfig: NextConfig = {
   },
   transpilePackages: ['@reown/appkit', '@reown/appkit-adapter-wagmi', 'wagmi', 'viem'],
   serverExternalPackages: ['pino', 'pino-pretty'],
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        encoding: false,
-      }
-    }
-    config.externals.push('pino-pretty', 'lokijs', 'encoding')
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'porto': false,
-      'coinbase-wallet-sdk': false,
-      '@gemini/web3-provider': false,
-    }
-    return config
-  },
+  turbopack: {},
 };
 
 export default nextConfig;
