@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Icons } from './ui/icons'
 import { NewsletterForm } from './footer/NewsletterForm'
+import { TechBadge } from './footer/TechBadge'
 
 export default function Footer() {
     return (
@@ -84,6 +85,18 @@ export default function Footer() {
                                 </Link>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                {/* Built With Section */}
+                <div className="mt-12 pt-8 border-t border-white/10">
+                    <h4 className="text-sm font-semibold text-white mb-4 text-center">Built With</h4>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        <TechBadge name="Next.js" />
+                        <TechBadge name="Reown" />
+                        <TechBadge name="Wagmi" />
+                        <TechBadge name="Tailwind CSS" />
+                        <TechBadge name="Bun" />
                     </div>
                 </div>
 
