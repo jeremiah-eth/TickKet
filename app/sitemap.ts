@@ -1,17 +1,38 @@
 import { Metadata, Route } from 'next'
 
-export default function sitemap(): Metadata {
-    const routes = [
-        '',
-        '/events',
-        '/create-event',
-        '/about',
-        '/faq',
-        '/market'
-    ].map((route) => ({
-        url: `https://tickket.vercel.app${route}`,
-        lastModified: new Date().toISOString().split('T')[0]
-    }))
-
-    return routes as unknown as Metadata
+export default function sitemap(): MetadataRoute.Sitemap {
+    return [
+        {
+            url: 'https://tickket.vercel.app',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/events',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/create-event',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/market',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/about',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/settings',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/terms',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://tickket.vercel.app/privacy',
+            lastModified: new Date(),
+        },
+    ]
 }
