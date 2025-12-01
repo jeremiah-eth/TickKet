@@ -1,4 +1,4 @@
-import ConnectButton from "@/components/ConnectButton";
+import { ConnectButton } from "@/components/ConnectButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";

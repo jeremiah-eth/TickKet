@@ -33,7 +33,14 @@ export default function MyTicketsPage() {
                     {tickets.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {tickets.map((ticket) => (
-                                <TicketCard key={ticket.id} {...ticket} />
+                                <TicketCard
+                                    key={ticket.id}
+                                    ticketId={ticket.tokenId}
+                                    eventName={ticket.eventName}
+                                    eventDate={new Date(ticket.date).toLocaleDateString()}
+                                    ticketType="General Admission"
+                                    isValid={true}
+                                />
                             ))}
                         </div>
                     ) : (

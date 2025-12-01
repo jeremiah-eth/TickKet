@@ -1,6 +1,6 @@
 import { cookieStorage, createStorage, http } from 'wagmi'
 import { mainnet, sepolia } from 'wagmi/chains'
-import { Chain, getDefaultConfig } from '@reown/appkit/networks'
+import { Chain } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 // Get projectId from https://cloud.reown.com
