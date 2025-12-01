@@ -16,8 +16,32 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "TickKet | Web3 Event Ticketing",
-  description: "Decentralized event ticketing platform powered by Reown",
+  title: {
+    default: "TickKet | Web3 Event Ticketing Platform",
+    template: "%s | TickKet"
+  },
+  description: "Decentralized event ticketing platform powered by blockchain technology. Create, buy, and sell event tickets as NFTs with complete transparency and security.",
+  keywords: ["web3", "blockchain", "NFT tickets", "event ticketing", "decentralized", "crypto events"],
+  authors: [{ name: "TickKet Team" }],
+  creator: "TickKet",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tickket.vercel.app",
+    title: "TickKet | Web3 Event Ticketing Platform",
+    description: "Decentralized event ticketing platform powered by blockchain technology.",
+    siteName: "TickKet",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TickKet | Web3 Event Ticketing Platform",
+    description: "Decentralized event ticketing platform powered by blockchain technology.",
+    creator: "@tickket",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default async function RootLayout({
