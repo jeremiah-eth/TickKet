@@ -38,7 +38,8 @@ import {
     Minus,
     Upload,
     Send,
-    Twitter as TwitterIcon
+    Twitter as TwitterIcon,
+    Github
 } from 'lucide-react'
 
 export type Icon = LucideIcon
@@ -86,5 +87,6 @@ export const Icons = {
     minus: Minus,
     upload: Upload,
     telegram: Send,
-    twitterX: TwitterIcon
+    twitterX: TwitterIcon,
+    github: Github
 }

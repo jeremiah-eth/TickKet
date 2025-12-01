@@ -37,8 +37,21 @@ export default function Footer() {
                         <h4 className="text-sm font-semibold text-white mb-4">Community</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="https://github.com/jeremiah-eth/TickKet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors">
+                                <a href="https://github.com/jeremiah-eth/TickKet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                                    <Icons.github className="h-4 w-4" />
                                     GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                                    <Icons.twitterX className="h-4 w-4" />
+                                    Twitter/X
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://t.me/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
+                                    <Icons.telegram className="h-4 w-4" />
+                                    Telegram
                                 </a>
                             </li>
                         </ul>
