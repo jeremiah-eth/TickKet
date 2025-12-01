@@ -22,7 +22,12 @@ export default function Footer() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     <div>
-                        <h3 className="text-lg font-semibold text-white mb-4 font-heading">TickKet</h3>
+                        <div className="flex items-center gap-2 mb-4">
+                            <div className="h-8 w-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                                <Icons.ticket className="h-5 w-5 text-white" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-white font-heading">TickKet</h3>
+                        </div>
                         <p className="text-gray-400 text-sm">
                             Decentralized event ticketing platform powered by blockchain technology.
                         </p>
