@@ -37,20 +37,20 @@ export default function Footer() {
                         <h4 className="text-sm font-semibold text-white mb-4">Community</h4>
                         <ul className="space-y-2">
                             <li>
-                                <a href="https://github.com/jeremiah-eth/TickKet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
-                                    <Icons.github className="h-4 w-4" />
+                                <a href="https://github.com/jeremiah-eth/TickKet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-all flex items-center gap-2 group">
+                                    <Icons.github className="h-4 w-4 group-hover:scale-110 transition-transform" />
                                     GitHub
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
-                                    <Icons.twitterX className="h-4 w-4" />
+                                <a href="https://twitter.com/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-all flex items-center gap-2 group">
+                                    <Icons.twitterX className="h-4 w-4 group-hover:scale-110 transition-transform" />
                                     Twitter/X
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2">
-                                    <Icons.telegram className="h-4 w-4" />
+                                <a href="https://t.me/tickket" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-sm transition-all flex items-center gap-2 group">
+                                    <Icons.telegram className="h-4 w-4 group-hover:scale-110 transition-transform" />
                                     Telegram
                                 </a>
                             </li>
