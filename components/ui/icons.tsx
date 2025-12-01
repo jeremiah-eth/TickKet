@@ -36,7 +36,9 @@ import {
     Linkedin,
     MessageCircle,
     Minus,
-    Upload
+    Upload,
+    Send,
+    Twitter as TwitterIcon
 } from 'lucide-react'
 
 export type Icon = LucideIcon
@@ -82,5 +84,7 @@ export const Icons = {
     linkedin: Linkedin,
     messageCircle: MessageCircle,
     minus: Minus,
-    upload: Upload
+    upload: Upload,
+    telegram: Send,
+    twitterX: TwitterIcon
 }
