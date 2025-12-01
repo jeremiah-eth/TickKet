@@ -1,67 +1,43 @@
-'use client'
-
 import { Card } from '@/components/ui/Card'
-import { TicketCard } from '@/components/TicketCard'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import { mockTickets } from '@/lib/mockData'
-import { Icons } from '@/components/ui/icons'
-import { Button } from '@/components/ui/Button'
-import Link from 'next/link'
 
-export default function MyTicketsPage() {
-    const tickets = mockTickets
-
+export default function DashboardTicketsPage() {
     return (
-        <>
-            <Navbar />
-            <div className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-pink-900 pt-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <div className="flex items-center justify-between mb-8">
-                        <div>
-                            <h1 className="text-4xl font-bold text-white mb-2 font-heading">My Tickets</h1>
-                            <p className="text-gray-400">View and manage your event tickets</p>
-                        </div>
-                        <Link href="/events">
-                            <Button variant="glass">
-                                <Icons.search className="mr-2 h-4 w-4" />
-                                Browse Events
-                            </Button>
-                        </Link>
-                    </div>
+        <div className="container mx-auto px-4 py-24">
+            <h1 className="text-3xl font-bold text-white mb-8">Dashboard - Tickets</h1>
 
-                    {tickets.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {tickets.map((ticket) => (
-                                <TicketCard
-                                    key={ticket.id}
-                                    ticketId={ticket.tokenId}
-                                    eventName={ticket.eventName}
-                                    eventDate={new Date(ticket.date).toLocaleDateString()}
-                                    ticketType="General Admission"
-                                    isValid={true}
-                                />
-                            ))}
-                        </div>
-                    ) : (
-                        <Card className="p-12 text-center">
-                            <div className="flex justify-center mb-4">
-                                <div className="h-16 w-16 bg-white/5 rounded-full flex items-center justify-center">
-                                    <Icons.ticket className="h-8 w-8 text-gray-400" />
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold text-white mb-2">No tickets yet</h3>
-                            <p className="text-gray-400 mb-6">
-                                You haven't purchased any tickets yet. Browse events to find your next experience.
-                            </p>
-                            <Link href="/events">
-                                <Button>Explore Events</Button>
-                            </Link>
-                        </Card>
-                    )}
-                </div>
+            {/* Mobile: Stack cards, Desktop: Table */}
+            <div className="hidden md:block overflow-x-auto">
+                <table className="w-full">
+                    <thead>
+                        <tr className="border-b border-white/10">
+                            <th className="text-left p-4 text-gray-400">Event</th>
+                            <th className="text-left p-4 text-gray-400">Date</th>
+                            <th className="text-left p-4 text-gray-400">Tickets</th>
+                            <th className="text-left p-4 text-gray-400">Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="border-b border-white/10">
+                            <td className="p-4 text-white">Sample Event</td>
+                            <td className="p-4 text-gray-400">Dec 15, 2025</td>
+                            <td className="p-4 text-white">50/100</td>
+                            <td className="p-4 text-white">$500</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <Footer />
-        </>
+
+            {/* Mobile Card View */}
+            <div className="md:hidden space-y-4">
+                <Card className="p-4">
+                    <h3 className="font-bold text-white mb-2">Sample Event</h3>
+                    <div className="space-y-1 text-sm">
+                        <p className="text-gray-400">Date: Dec 15, 2025</p>
+                        <p className="text-white">Tickets: 50/100</p>
+                        <p className="text-white">Revenue: $500</p>
+                    </div>
+                </Card>
+            </div>
+        </div>
     )
 }
