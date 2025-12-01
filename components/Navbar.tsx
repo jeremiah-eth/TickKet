@@ -26,7 +26,8 @@ export default function Navbar() {
         { href: '/events', label: 'Events' },
         { href: '/create-event', label: 'Create Event' },
         { href: '/market', label: 'Marketplace' },
-        { href: '/about', label: 'About' }
+        { href: '/about', label: 'About' },
+        { href: '/settings', label: 'Settings' }
     ]
 
     return (
